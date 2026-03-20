@@ -1,26 +1,77 @@
 # IdeaVault
 
 ## プロジェクト概要
-- エンジン/フレームワーク: 
+- 種別: Obsidian Vault + Claude Code + Git によるアイディア管理パイプライン
 - リポジトリ: https://github.com/kaiman2110/IdeaVault
 
 ## アーキテクチャ原則
-<!-- プロジェクト固有の原則をここに記載 -->
-<!-- 例: EventBus 経由の疎結合通信 / Resource ベースのデータ設計 -->
+- **Vault コンテンツ操作は main 直接コミット可**: inbox 整理・ブラッシュアップ等の日常操作は feature ブランチ不要
+- **構造変更は feature ブランチ**: スキル・テンプレート・設定の変更は `feature/issue/<N>` 経由
+- **メモの内容を勝手に削除しない**: 追記・構造化のみ
+- **フォルダ移動は提案→確認→実行**: 自動移動しない
+- **frontmatter の id, created は変更しない**: updated のみ更新
+- **Obsidian リンク記法 `[[]]` を使用**
 
 ## 既知の落とし穴
 
 | 問題 | 対処法 |
 |------|--------|
-<!-- フレームワーク/エンジン固有の問題と対処法を追記 -->
-
-## グローバル状態一覧
-<!-- Autoload / シングルトン / グローバル変数 等 -->
+| block-push-main Hook が Vault コンテンツ操作もブロックする | Vault スキル内でバイパス仕組みが必要（MS1 で対応予定） |
 
 ## フォルダ構造
 ```
-<!-- プロジェクトのディレクトリ構造を記載 -->
+idea-vault/
+├── inbox/                  ← メモを雑に放り込む場所
+├── incubating/             ← ブラッシュアップ・調査中
+├── actionable/             ← TODO化済み、実行待ち
+├── projects/               ← 独立プロジェクトに昇格したもの
+├── archive/                ← 完了 or 取り下げ
+├── references/             ← 参考記事・リンク集
+├── templates/              ← Obsidian Templater用テンプレート
+├── docs/                   ← ロードマップ・アイデアメモ
+├── .claude/                ← Claude Code設定・スキル・Hook
+├── .obsidian/              ← Obsidian設定
+├── CLAUDE.md
+└── idea-vault-design.md    ← 設計ドキュメント
 ```
+
+## Vault コマンド体系
+
+| コマンド | 説明 |
+|---------|------|
+| `/inbox` | inbox/ 内メモの整理（frontmatter付与・フォルダ移動提案） |
+| `/brainstorm` | メモのブラッシュアップ（構造化・具体化・補足） |
+| `/research` | メモの技術調査（実現可能性・選択肢・トレードオフ） |
+| `/vault-design` | メモから設計ドキュメント生成（projects/ に配置） |
+| `/relate` | Vault 全体スキャンで関連メモをリンク |
+| `/stocktake` | 指定ステータスのメモ棚卸し |
+
+## Frontmatter スキーマ
+
+### needs フィールド（メモのステータス）
+| 値 | 意味 | フォルダ |
+|----|------|---------|
+| `brainstorm` | ぼんやり。考えを広げたい | inbox/ or incubating/ |
+| `research` | 調査が必要 | incubating/ |
+| `design` | 設計を起こしたい | incubating/ |
+| `execution` | TODO化済み、実行待ち | actionable/ |
+| `on-hold` | 寝かせ中 | incubating/ |
+| `done` | 完了 | archive/ |
+| `dropped` | 取り下げ | archive/ |
+
+### type フィールド（メモの種別）
+| 値 | 説明 |
+|----|------|
+| `idea` | アイディア・思いつき |
+| `task` | 具体的タスク |
+| `reference` | 参考記事・リソース |
+| `exploration` | 長期探求テーマ |
+
+## タグ規約
+- 小文字、ハイフン区切り（例: `game-dev`, `claude-code`）
+- プロジェクト名タグ: `arpg`, `discord-bot` など
+- 技術タグ: `godot`, `gdscript`, `react` など
+- カテゴリタグ: `ui`, `ai`, `workflow` など
 
 ## テスト
 - フレームワーク: (未設定)
