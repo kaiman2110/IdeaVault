@@ -27,6 +27,7 @@ idea-vault/
 ├── projects/               ← 独立プロジェクトに昇格したもの
 ├── archive/                ← 完了 or 取り下げ
 ├── references/             ← 参考記事・リンク集
+├── dashboards/             ← Dataview ダッシュボード・カンバンボード
 ├── templates/              ← Obsidian Templater用テンプレート
 ├── docs/                   ← ロードマップ・アイデアメモ
 ├── .claude/                ← Claude Code設定・スキル・Hook
