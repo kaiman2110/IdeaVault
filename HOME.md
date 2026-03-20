@@ -28,6 +28,7 @@ updated: 2026-03-20
 
 - [[dashboards/overview|メモ一覧ダッシュボード]] — needs 別・type 別・タグ別の全メモ一覧
 - [[dashboards/kanban|カンバンボード]] — needs をカラムにしたボード
+- [[dashboards/weekly-review|週次レビュー]] — 今週の活動・停滞メモの検出
 
 ---
 
