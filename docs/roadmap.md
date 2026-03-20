@@ -2,22 +2,22 @@
 
 ## 現在のマイルストーン
 
-### Milestone 1: Vault 基盤構築
+### Milestone 1: Vault 基盤構築 ✅ 完了
 
 **ゴール**: Vault 構造・テンプレート・Git 運用基盤を構築し、メモの投入から管理までの基本フローが動く状態にする。
 
-| # | Issue | 優先度 | 依存 |
-|---|-------|--------|------|
-| 1 | Git/GitHub リポジトリ初期化 | high | — |
-| 2 | Vault ディレクトリ構造の作成 | high | #1 |
-| 3 | テンプレートファイルの作成 | high | #2 |
-| 4 | CLAUDE.md に Vault 処理ルールを反映 | high | #2 |
-| 5 | /inbox スキル実装 | high | #3, #4 |
-| 6 | /brainstorm スキル実装 | medium | #5 |
-| 7 | /research スキル実装 | medium | #5 |
-| 8 | /vault-design スキル実装 | medium | #5 |
-| 9 | /relate スキル実装 | low | #5 |
-| 10 | /stocktake スキル実装 | low | #5 |
+| # | Issue | 優先度 | 依存 | 状態 |
+|---|-------|--------|------|------|
+| 1 | Git/GitHub リポジトリ初期化 | high | — | ✅ |
+| 2 | Vault ディレクトリ構造の作成 | high | #1 | ✅ |
+| 3 | テンプレートファイルの作成 | high | #2 | ✅ |
+| 4 | CLAUDE.md に Vault 処理ルールを反映 | high | #2 | ✅ |
+| 5 | /inbox スキル実装 | high | #3, #4 | ✅ |
+| 6 | /brainstorm スキル実装 | medium | #5 | ✅ |
+| 7 | /research スキル実装 | medium | #5 | ✅ |
+| 8 | /vault-design スキル実装 | medium | #5 | ✅ |
+| 9 | /relate スキル実装 | low | #5 | ✅ |
+| 10 | /stocktake スキル実装 | low | #5 | ✅ |
 
 **実装順序**: #1 → #2 → #3, #4（並列） → #5 → #6, #7, #8（並列） → #9, #10（並列）
 
@@ -40,3 +40,4 @@
 ## 更新履歴
 
 - 2026-03-20: MS1「Vault 基盤構築」計画・Issue 作成完了
+- 2026-03-20: MS1「Vault 基盤構築」全 Issue 完了（#1〜#10）

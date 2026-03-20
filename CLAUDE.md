@@ -16,7 +16,7 @@
 
 | 問題 | 対処法 |
 |------|--------|
-| block-push-main Hook が Vault コンテンツ操作もブロックする | Vault スキル内でバイパス仕組みが必要（MS1 で対応予定） |
+| block-push-main Hook が Vault コンテンツ操作もブロックする | Vault スキルでは main 直接コミット・push を許可（アーキテクチャ原則参照） |
 
 ## フォルダ構造
 ```
@@ -101,6 +101,11 @@ idea-vault/
 | `/deep-analyze [focus]` | Agent teams 並列解析（構造・品質・シグナル・コンテンツ） |
 | `/research-game <テーマ>` | 参考事例の設計を Deep Research → 適用案 |
 | `/inbox [ファイル名]` | inbox/ 内メモの整理（frontmatter推定・付与・移動提案） |
+| `/brainstorm [ファイル名]` | メモのブラッシュアップ（構造化・具体化・補足） |
+| `/research [ファイル名]` | メモの技術調査（実現可能性・選択肢・トレードオフ） |
+| `/vault-design [ファイル名]` | メモから設計ドキュメント生成（projects/ に配置） |
+| `/relate [ファイル名]` | Vault 全体スキャンで関連メモをリンク |
+| `/stocktake [ステータス]` | 指定ステータスのメモ棚卸し |
 | `/idea <内容>` | アイデアを docs/ideas.md に即メモ |
 | `/fix-errors` | エラーログ自動解析・修正 |
 | `/review-changes` | アーキテクチャ原則に照らしたレビュー |
