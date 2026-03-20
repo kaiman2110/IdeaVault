@@ -100,6 +100,7 @@ idea-vault/
 | `/milestone-plan <テーマ>` | マイルストーン計画→Issue分割→ボード登録 |
 | `/deep-analyze [focus]` | Agent teams 並列解析（構造・品質・シグナル・コンテンツ） |
 | `/research-game <テーマ>` | 参考事例の設計を Deep Research → 適用案 |
+| `/inbox [ファイル名]` | inbox/ 内メモの整理（frontmatter推定・付与・移動提案） |
 | `/idea <内容>` | アイデアを docs/ideas.md に即メモ |
 | `/fix-errors` | エラーログ自動解析・修正 |
 | `/review-changes` | アーキテクチャ原則に照らしたレビュー |
