@@ -3,6 +3,13 @@
 .obsidian/workspace-mobile.json
 .obsidian/graph.json
 .obsidian/backlink.json
+.obsidian/app.json
+.obsidian/appearance.json
+
+# Obsidian - プラグイン本体（Obsidian が自動DL、Git管理不要）
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/styles.css
 
 # OS
 .DS_Store

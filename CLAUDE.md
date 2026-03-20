@@ -32,6 +32,7 @@ idea-vault/
 ├── docs/                   ← ロードマップ・アイデアメモ
 ├── .claude/                ← Claude Code設定・スキル・Hook
 ├── .obsidian/              ← Obsidian設定
+├── HOME.md                 ← ホームノート（MOC: Map of Content）
 ├── CLAUDE.md
 └── idea-vault-design.md    ← 設計ドキュメント
 ```
